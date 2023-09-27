@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
 
         //Step 2: Provide a LayoutManager
-        val LayoutManager=LinearLayoutManager(this)
+        val layoutManager=LinearLayoutManager(this)
         //Step 4: Provide a RecyclerView.Adapter
         val adapter=NumberDisplayAdapter()
         recyclerView.adapter=adapter

@@ -6,29 +6,23 @@ import androidx.recyclerview.widget.RecyclerView
 
 // Step 3: Complete adapter implementation
 
-class NumberDisplayAdapter:RecyclerView.Adapter<NumberDisplayAdapter.NumberViewHolder>()/* Step 3a: Provide Adapter Parent */{
+class NumberDisplayAdapter:RecyclerView.Adapter<NumberDisplayAdapter.NumberViewHolder>()/* Step 3a: Provide Adapter Parent */ {
 
-    class NumberViewHolder (val textView: TextView) : RecyclerView.ViewHolder (textView) {}
+    class NumberViewHolder(val textView: TextView) : RecyclerView.ViewHolder(textView) {}
 
     //Step 3b: Complete function definitions for adapter
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NumberViewHolder {
-        TODO("Not yet implemented")
+        return NumberViewHolder(TextView(
+            parent.context
+        ).apply { layoutParams = ViewGroup.LayoutParams(300, 300) })
     }
 
     override fun onBindViewHolder(holder: NumberViewHolder, position: Int) {
-        TODO("Not yet implemented")
+        holder.textView.text = position.toString()
     }
 
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
-    }
-
-    override fun onBindViewHolder(
-        holder: NumberViewHolder,
-        position: Int,
-        payloads: MutableList<Any>
-    ) {
-        super.onBindViewHolder(holder, position, payloads)
+        return 100
     }
 
 }
